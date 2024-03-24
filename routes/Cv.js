@@ -7,7 +7,7 @@ CvRouter.get("/cv/:langue", async (req, res) => {
     const langue = req.params.langue;
    
     try {
-        const cv = await Cv.findOne({ langue: "fr" });
+        const cv = await Cv.findOne({ langue: langue });
         
         if (!cv) {
             console.log("CV non trouvé");
